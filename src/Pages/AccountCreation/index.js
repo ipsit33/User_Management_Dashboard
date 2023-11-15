@@ -70,7 +70,7 @@ function AccountCreation() {
         };
 
         // Check if the email is already registered
-        const existingUserRes = await fetch(`http://localhost:8080/accounts?Email=${email}`, {
+        const existingUserRes = await fetch(`https://user-mngmnt.onrender.com/accounts?Email=${email}`, {
             method: 'GET'
         });
 
@@ -80,7 +80,7 @@ function AccountCreation() {
             return;
         }
 
-        const res = await fetch('http://localhost:8080/accounts', {
+        const res = await fetch('https://user-mngmnt.onrender.com/accounts', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

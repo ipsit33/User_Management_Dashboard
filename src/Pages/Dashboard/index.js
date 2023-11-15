@@ -16,7 +16,7 @@ function DashBoard() {
 
     const fetchRegisteredUsers = async () => {
         try {
-            const response = await fetch('http://localhost:8080/accounts', {
+            const response = await fetch('https://user-mngmnt.onrender.com/accounts', {
                 method: 'GET'
             });
 

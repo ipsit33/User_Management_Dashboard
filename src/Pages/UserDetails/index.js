@@ -1,62 +1,3 @@
-// import { Table } from "antd";
-// import Search from "antd/es/input/Search";
-// import { useEffect, useState } from "react";
-
-// function UserDetails() {
-//     const [dataSource, setDataSource] = useState([]);
-//     const [loading, setLoading] = useState(false);
-
-//     const fetchData = () => {
-//         setLoading(true);
-//         fetch('http://localhost:8080/accounts', {
-//           method: 'GET'
-//         })
-//           .then((res) => res.json())
-//           .then((data) => {
-//             setDataSource(data);
-//             setLoading(false);
-//           });
-//       };
-
-//       useEffect(() => {
-//         fetchData();
-//         const interval = setInterval(fetchData, 120000);
-    
-//         return () => clearInterval(interval);
-//       }, []);
-//     return (
-//        <div>
-//          <Search placeholder="Search..." onSearch={dataSource.name}/>
-//         <Table columns={[
-//             {
-//                 title: 'ID',
-//                 dataIndex: 'id',
-//             },
-//             {
-//                 title: 'UserName',
-//                 dataIndex: 'Username',
-//             },
-//             {
-//                 title: 'Email',
-//                 dataIndex: 'Email',
-//             },
-//             {
-//                 title: 'Phone Number',
-//                 dataIndex: 'Phone',
-//             },
-//             {
-//                 title: 'Creation Date',
-//                 dataIndex: 'Creation_Date',
-//             },
-//         ]} 
-//         loading={loading}
-//         dataSource = {dataSource}>
-//         </Table>
-//        </div>
-//     );
-// }
-// export default UserDetails;
-
 import { Table, Input } from "antd";
 import { useEffect, useState } from "react";
 
@@ -69,7 +10,7 @@ function UserDetails() {
 
   const fetchData = () => {
     setLoading(true);
-    fetch('http://localhost:8080/accounts', {
+    fetch('https://user-mngmnt.onrender.com/accounts', {
       method: 'GET'
     })
       .then((res) => res.json())
